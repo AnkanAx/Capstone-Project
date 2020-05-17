@@ -6,7 +6,7 @@ shinyUI(fluidPage(
         br(),
         fluidRow(column(6,p("This application predicts the next word you will write using a library of word sequences. 
                          To make a prediction just enter a sequence of words in the dialog box and then press \"Predict\".
-                         Then wait for the top 3 predicted words to show up under \"Predicted words\"."), style ="color:blue", align = "left")),
+                         Then wait for the predicted word to show up under \"Predicted word\"."), style ="color:blue", align = "left")),
         br(),
         br(),
         
@@ -16,10 +16,8 @@ shinyUI(fluidPage(
                 actionButton("do", "Predict")
             ),
             mainPanel(h4
-                ("Predicted words:"), 
-                fluidRow(column(5, verbatimTextOutput("out1", placeholder = TRUE))),
-                fluidRow(column(5, verbatimTextOutput("out2", placeholder = TRUE))),
-                fluidRow(column(5, verbatimTextOutput("out3", placeholder = TRUE)))
+                ("Predicted word:"), 
+                fluidRow(column(5, verbatimTextOutput("out1", placeholder = TRUE)))
                                 )
             )
         )

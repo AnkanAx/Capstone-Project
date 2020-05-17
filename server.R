@@ -85,7 +85,5 @@ shinyServer(function(input, output) {
     observeEvent(input$do, {
     out <- Predictor(input$sentence);
     output$out1 <- renderText({as.character(out[1,1])});
-    output$out2 <- renderText({as.character(out[1,2])});
-    output$out3 <- renderText({as.character(out[1,3])});
     })
 })
